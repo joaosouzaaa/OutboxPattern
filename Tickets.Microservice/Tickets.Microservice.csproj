@@ -25,6 +25,7 @@
 	  <Folder Include="Extensions\" />
 	  <Folder Include="Middlewares\" />
 	  <Folder Include="Constants\" />
+	  <Folder Include="DataTransferObjects\" />
 	  <Folder Include="Validators\" />
 	  <Folder Include="Services\" />
 	  <Folder Include="Repositories\" />
