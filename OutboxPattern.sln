@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EB07CD32-FC8B-40D8-AF95-1CFA5C89CACD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tickets.Microservice", "Tickets.Microservice\Tickets.Microservice.csproj", "{55AA8994-CD9F-4A20-B650-FA9C6C58623B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55AA8994-CD9F-4A20-B650-FA9C6C58623B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55AA8994-CD9F-4A20-B650-FA9C6C58623B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55AA8994-CD9F-4A20-B650-FA9C6C58623B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55AA8994-CD9F-4A20-B650-FA9C6C58623B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
