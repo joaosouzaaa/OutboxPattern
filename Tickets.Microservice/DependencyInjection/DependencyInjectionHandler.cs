@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Tickets.Microservice.Constants;
 using Tickets.Microservice.Data.DatabaseContexts;
+using Tickets.Microservice.Factories;
 
 namespace Tickets.Microservice.DependencyInjection;
 
@@ -12,7 +13,7 @@ internal static class DependencyInjectionHandler
 
         services.AddDbContext<AppDbContext>(options =>
         {
-            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            var connectionString = configuration.GetConnectionString();
             options.UseSqlServer(connectionString);
 
             if (Environment.GetEnvironmentVariable(EnvironmentVariables.Environment) is EnvironmentsConstants.Development)
