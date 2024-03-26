@@ -13,7 +13,6 @@
 
 	<ItemGroup>
 		<Folder Include="Controllers\" />
-		<Folder Include="Data\EntitiesMapping\" />
 		<Folder Include="Data\Repositories\" />
 		<Folder Include="Interfaces\Mappers\" />
 		<Folder Include="Interfaces\Repositories\" />
