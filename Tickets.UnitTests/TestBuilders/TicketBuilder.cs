@@ -1,4 +1,5 @@
-﻿using Tickets.Microservice.Entities;
+﻿using Tickets.Microservice.DataTransferObjects.Ticket;
+using Tickets.Microservice.Entities;
 
 namespace Tickets.UnitTests.TestBuilders;
 public sealed class TicketBuilder
@@ -15,6 +16,33 @@ public sealed class TicketBuilder
         new();
 
     public Ticket DomainBuild() =>
+        new()
+        {
+            FirstAppearance = _firstAppearance,
+            CreatedDate = _createdDate,
+            Description = _description,
+            Id = _id,
+            Number = _number,
+            Tag = _tag,
+            Title = _title
+        };
+
+    public TicketSave SaveBuild() =>
+        new(_title,
+            _number,
+            _tag,
+            _description,
+            _firstAppearance);
+
+    public TicketUpdate UpdateBuild() =>
+        new(_id,
+            _title,
+            _number,
+            _tag,
+            _description,
+            _firstAppearance);
+
+    public TicketResponse ResponseBuild() =>
         new()
         {
             FirstAppearance = _firstAppearance,
