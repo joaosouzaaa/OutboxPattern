@@ -20,8 +20,6 @@
 	  <Folder Include="Interfaces\Services\" />
 	  <Folder Include="Mappers\" />
 	  <Folder Include="Entities\" />
-	  <Folder Include="Enums\" />
-	  <Folder Include="Extensions\" />
 	  <Folder Include="DataTransferObjects\" />
 	  <Folder Include="Validators\" />
 	  <Folder Include="Services\" />
