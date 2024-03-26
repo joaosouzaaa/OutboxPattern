@@ -19,7 +19,6 @@
 	  <Folder Include="Interfaces\Repositories\" />
 	  <Folder Include="Interfaces\Services\" />
 	  <Folder Include="Mappers\" />
-	  <Folder Include="Entities\" />
 	  <Folder Include="DataTransferObjects\" />
 	  <Folder Include="Validators\" />
 	  <Folder Include="Services\" />
