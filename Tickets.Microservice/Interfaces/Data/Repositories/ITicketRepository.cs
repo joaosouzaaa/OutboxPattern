@@ -2,7 +2,7 @@
 using Tickets.Microservice.Entities;
 using Tickets.Microservice.Settings.PaginationSettings;
 
-namespace Tickets.Microservice.Interfaces.Repositories;
+namespace Tickets.Microservice.Interfaces.Data.Repositories;
 
 public interface ITicketRepository
 {

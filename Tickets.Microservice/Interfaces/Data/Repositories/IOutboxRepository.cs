@@ -1,6 +1,6 @@
 ﻿using Tickets.Microservice.Entities;
 
-namespace Tickets.Microservice.Interfaces.Repositories;
+namespace Tickets.Microservice.Interfaces.Data.Repositories;
 
 public interface IOutboxRepository
 {
