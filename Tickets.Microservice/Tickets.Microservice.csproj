@@ -4,14 +4,17 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>f62958ec-d7bb-450f-8e45-0a73a8618c3a</UserSecretsId>
+		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+		<DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="FluentValidation" Version="11.9.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.3" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.3">
-		  <PrivateAssets>all</PrivateAssets>
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
