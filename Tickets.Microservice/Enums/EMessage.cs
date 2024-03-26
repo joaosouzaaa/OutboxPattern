@@ -11,5 +11,8 @@ public enum EMessage : ushort
     Required,
 
     [Description("{0} was not found.")]
-    NotFound
+    NotFound,
+
+    [Description("{0} has to be greater than {1}.")]
+    GreaterThan,
 }

@@ -25,5 +25,11 @@ internal static class DependencyInjectionHandler
         services.AddSettingsDependencyInjection();
         services.AddFilterDependencyInjection();
         services.AddRepositoriesDependencyInjection();
+        services.AddMappersDependencyInjection();
+        services.AddValidatorsDependencyInjection();
+        services.AddServicesDependencyInjection();
+        services.AddOptionsDependencyInjection(configuration);
+        services.AddBackgroundServicesDependencyInjection();
+        services.AddPublishersDependencyInjection();
     }
 }

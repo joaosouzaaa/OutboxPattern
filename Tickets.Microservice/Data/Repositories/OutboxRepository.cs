@@ -15,9 +15,9 @@ public sealed class OutboxRepository(AppDbContext dbContext) : BaseRepository<Ou
         return await SaveChangesAsync();
     }
 
-    public async Task<bool> UpdateProcessedDateAsync(Guid id, DateTime processedDate) =>
+    public async Task<bool> UpdateProcessedDateToCurrentDateAsync(Guid id) =>
         await DbContextSet.Where(o => o.Id == id)
-                          .ExecuteUpdateAsync(o => o.SetProperty(o => o.ProcessedDate, processedDate)) > 0;
+                          .ExecuteUpdateAsync(o => o.SetProperty(o => o.ProcessedDate, DateTime.UtcNow)) > 0;
 
     public Task<List<Outbox>> GetAllUnprocessedMessagesAsync() =>
         DbContextSet.Where(o => o.ProcessedDate == null)
