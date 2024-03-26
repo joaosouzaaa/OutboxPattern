@@ -29,5 +29,11 @@ public sealed class OutboxBackgroundService(IServiceScopeFactory scopeFactory) :
 
             await outboxRepository.UpdateProcessedDateToCurrentDateAsync(message.Id);
         }
+
+        while (!stoppingToken.IsCancellationRequested)
+        {
+            const int millisecondsDelay = 1000;
+            await Task.Delay(millisecondsDelay, stoppingToken);
+        }
     }
 }
