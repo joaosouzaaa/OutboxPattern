@@ -5,6 +5,6 @@ namespace Tickets.Microservice.Interfaces.Data.Repositories;
 public interface IOutboxRepository
 {
     Task<bool> AddAsync(Outbox outbox);
-    Task<bool> UpdateProcessedDateAsync(Guid id, DateTime processedDate);
+    Task<bool> UpdateProcessedDateToCurrentDateAsync(Guid id);
     Task<List<Outbox>> GetAllUnprocessedMessagesAsync();
 }
