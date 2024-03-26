@@ -1,5 +1,5 @@
 ﻿using Tickets.Microservice.Data.Repositories;
-using Tickets.Microservice.Interfaces.Repositories;
+using Tickets.Microservice.Interfaces.Data.Repositories;
 
 namespace Tickets.Microservice.DependencyInjection;
 

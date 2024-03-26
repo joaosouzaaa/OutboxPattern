@@ -3,7 +3,7 @@ using Tickets.Microservice.Arguments;
 using Tickets.Microservice.Data.DatabaseContexts;
 using Tickets.Microservice.Data.Repositories.BaseRepositories;
 using Tickets.Microservice.Entities;
-using Tickets.Microservice.Interfaces.Repositories;
+using Tickets.Microservice.Interfaces.Data.Repositories;
 using Tickets.Microservice.Settings.PaginationSettings;
 
 namespace Tickets.Microservice.Data.Repositories;
