@@ -23,6 +23,6 @@ public sealed class SupportMapping : IEntityTypeConfiguration<SupportEngineer>
         builder.Property(s => s.IsEnabled)
                .IsRequired(true)
                .HasColumnName("is_enabled")
-               .HasColumnType("bool");
+               .HasColumnType("bit");
     }
 }
