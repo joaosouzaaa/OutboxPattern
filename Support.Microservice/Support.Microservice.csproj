@@ -15,7 +15,6 @@
 		<Folder Include="Data\EntitiesMapping\" />
 		<Folder Include="Data\DatabaseContexts\" />
 		<Folder Include="Data\Repositories\" />
-		<Folder Include="Entities\" />
 		<Folder Include="Consumers\" />
 		<Folder Include="DataTransferObjects\" />
 		<Folder Include="Interfaces\Mappers\" />

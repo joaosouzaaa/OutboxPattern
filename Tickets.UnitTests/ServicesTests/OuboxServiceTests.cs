@@ -21,7 +21,7 @@ public sealed class OuboxServiceTests
     public async Task AddAsync_SuccessfulScenario_ReturnsTask()
     {
         // A
-        var ticketCreatedEvent = new TicketCreatedEvent(Guid.NewGuid());
+        var ticketCreatedEvent = new TicketCreatedEvent(Guid.NewGuid(), 123);
 
         _outboxRepositoryMock.Setup(o => o.AddAsync(It.IsAny<Outbox>()));
 
