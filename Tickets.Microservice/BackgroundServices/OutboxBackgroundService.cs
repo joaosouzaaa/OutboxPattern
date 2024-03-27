@@ -23,13 +23,13 @@ public sealed class OutboxBackgroundService(IServiceScopeFactory scopeFactory) :
                 try
                 {
                     outboxPublisher.PublishOutboxMessage(message);
+
+                    await outboxRepository.UpdateProcessedDateToCurrentDateAsync(message.Id);
                 }
                 catch
                 {
                     continue;
                 }
-
-                await outboxRepository.UpdateProcessedDateToCurrentDateAsync(message.Id);
             }
 
             const int millisecondsDelay = 1000;
