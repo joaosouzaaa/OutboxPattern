@@ -29,7 +29,7 @@ public sealed class TicketService(ITicketRepository ticketRepository,
 
         var addResult = await ticketRepository.AddAsync(ticket);
 
-        await outboxService.AddAsync(new TicketCreatedEvent(ticket.Id));
+        await outboxService.AddAsync(new TicketCreatedEvent(ticket.Id, ticket.Number));
 
         return addResult;
     }
