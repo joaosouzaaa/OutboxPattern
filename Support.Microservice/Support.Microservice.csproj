@@ -22,7 +22,6 @@
 		<Folder Include="Interfaces\Repositories\" />
 		<Folder Include="Interfaces\Services\" />
 		<Folder Include="Mappers\" />
-		<Folder Include="Factories\" />
 		<Folder Include="Middlewares\" />
 		<Folder Include="Options\" />
 		<Folder Include="Services\" />
