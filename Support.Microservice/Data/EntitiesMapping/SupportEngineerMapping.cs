@@ -4,7 +4,7 @@ using Support.Microservice.Entities;
 
 namespace Support.Microservice.Data.EntitiesMapping;
 
-public sealed class SupportMapping : IEntityTypeConfiguration<SupportEngineer>
+public sealed class SupportEngineerMapping : IEntityTypeConfiguration<SupportEngineer>
 {
     public void Configure(EntityTypeBuilder<SupportEngineer> builder)
     {
