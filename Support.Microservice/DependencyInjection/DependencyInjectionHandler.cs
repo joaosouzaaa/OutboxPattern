@@ -27,5 +27,7 @@ internal static class DependencyInjectionHandler
         services.AddFilterDependencyInjection();
         services.AddRepositoriesDependencyInjection();
         services.AddOptionsDependencyInjection(configuration);
+
+        services.AddValidatorsDependencyInjection();
     }
 }
