@@ -1,5 +1,6 @@
 using Support.Microservice.Constants;
 using Support.Microservice.DependencyInjection;
+using Support.Microservice.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 IConfiguration configuration = builder.Configuration;
@@ -15,6 +16,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+else
+{
+    app.UseMiddleware<UnexpectedErrorMiddleware>();
 }
 
 app.UseHttpsRedirection();
