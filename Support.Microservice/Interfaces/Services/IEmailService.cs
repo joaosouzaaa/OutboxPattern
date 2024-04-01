@@ -4,5 +4,5 @@ namespace Support.Microservice.Interfaces.Services;
 
 public interface IEmailService
 {
-    Task SendTicketCreatedEmailAsync(TicketCreatedEvent ticketCreated, string[] toEmailList);
+    Task SendTicketCreatedEmailAsync(TicketCreatedEvent ticketCreated);
 }

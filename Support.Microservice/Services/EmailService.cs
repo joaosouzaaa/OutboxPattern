@@ -1,15 +1,20 @@
 ﻿using MimeKit;
 using MimeKit.Text;
 using Support.Microservice.Contracts;
+using Support.Microservice.Interfaces.Repositories;
 using Support.Microservice.Interfaces.Services;
 using Support.Microservice.Interfaces.Settings;
 
 namespace Support.Microservice.Services;
 
-public sealed class EmailService(IEmailSender emailSender, IConfiguration configuration) : IEmailService
+public sealed class EmailService(ISupportEngineerRepository supportEngineerRepository,
+                                 IEmailSender emailSender, 
+                                 IConfiguration configuration) : IEmailService
 {
-    public async Task SendTicketCreatedEmailAsync(TicketCreatedEvent ticketCreated, string[] toEmailList)
+    public async Task SendTicketCreatedEmailAsync(TicketCreatedEvent ticketCreated)
     {
+        var toEmailList = await supportEngineerRepository.GetAllEmailsEnabledAsync();
+
         var mailMessage = new MimeMessage()
         {
             Subject = "A ticket was created!",
