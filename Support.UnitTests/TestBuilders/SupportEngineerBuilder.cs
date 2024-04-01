@@ -1,4 +1,5 @@
-﻿using Support.Microservice.Entities;
+﻿using Support.Microservice.DataTransferObjects.SupportEngineer;
+using Support.Microservice.Entities;
 
 namespace Support.UnitTests.TestBuilders;
 public sealed class SupportEngineerBuilder
@@ -12,6 +13,26 @@ public sealed class SupportEngineerBuilder
         new();
 
     public SupportEngineer DomainBuild() =>
+        new()
+        {
+            Email = _email,
+            Id = _id,
+            IsEnabled = _isEnabled,
+            Name = _name
+        };
+
+    public SupportEngineerSave SaveBuild() =>
+        new(_name, 
+            _email,
+            _isEnabled);
+
+    public SupportEngineerUpdate UpdateBuild() =>
+        new(_id,
+            _name,
+            _email,
+            _isEnabled);
+
+    public SupportEngineerResponse ResponseBuild() =>
         new()
         {
             Email = _email,
