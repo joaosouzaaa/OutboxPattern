@@ -2,11 +2,11 @@
 using Support.UnitTests.TestBuilders;
 
 namespace Support.UnitTests.ValidatorsTests;
-public sealed class SupportEnginnerValidatorTests
+public sealed class SupportEnginerValidatorTests
 {
     private readonly SupportEngineerValidator _validator;
 
-    public SupportEnginnerValidatorTests()
+    public SupportEnginerValidatorTests()
     {
         _validator = new SupportEngineerValidator();
     }
