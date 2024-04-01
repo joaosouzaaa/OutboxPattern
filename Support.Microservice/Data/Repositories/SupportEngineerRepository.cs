@@ -26,6 +26,9 @@ public sealed class SupportEngineerRepository(AppDbContext dbContext) : ISupport
     public Task<List<SupportEngineer>> GetAllAsync() =>
         DbContextSet.AsNoTracking().ToListAsync();
 
+    public Task<List<SupportEngineer>> GetAllEnabledAsync() =>
+        DbContextSet.AsNoTracking().Where(s => s.IsEnabled == true).ToListAsync();
+
     public void Dispose()
     {
         dbContext.Dispose();
