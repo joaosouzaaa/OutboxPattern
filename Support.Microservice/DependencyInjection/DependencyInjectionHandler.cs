@@ -29,5 +29,6 @@ internal static class DependencyInjectionHandler
         services.AddOptionsDependencyInjection(configuration);
         services.AddMappersDependencyInjection();
         services.AddValidatorsDependencyInjection();
+        services.AddServicesDependencyInjection();
     }
 }

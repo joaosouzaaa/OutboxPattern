@@ -28,11 +28,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ServicesTests\" />
+	  <ProjectReference Include="..\Support.Microservice\Support.Microservice.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Support.Microservice\Support.Microservice.csproj" />
+	  <Folder Include="ServicesTests\" />
 	</ItemGroup>
 
 </Project>
