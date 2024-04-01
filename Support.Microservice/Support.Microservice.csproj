@@ -21,7 +21,6 @@
 	<ItemGroup>
 		<Folder Include="Controllers\" />
 		<Folder Include="Consumers\" />
-		<Folder Include="DataTransferObjects\SupportEngineer\" />
 		<Folder Include="Interfaces\Mappers\" />
 		<Folder Include="Interfaces\Services\" />
 		<Folder Include="Mappers\" />
