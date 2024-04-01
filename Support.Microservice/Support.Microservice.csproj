@@ -21,9 +21,7 @@
 	<ItemGroup>
 		<Folder Include="Controllers\" />
 		<Folder Include="Consumers\" />
-		<Folder Include="Interfaces\Mappers\" />
 		<Folder Include="Interfaces\Services\" />
-		<Folder Include="Mappers\" />
 		<Folder Include="Services\" />
 	</ItemGroup>
 
