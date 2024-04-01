@@ -9,7 +9,8 @@ namespace Support.Microservice.Services;
 
 public sealed class EmailService(ISupportEngineerRepository supportEngineerRepository,
                                  IEmailSender emailSender, 
-                                 IConfiguration configuration) : IEmailService
+                                 IConfiguration configuration) 
+                                 : IEmailService
 {
     public async Task SendTicketCreatedEmailAsync(TicketCreatedEvent ticketCreated)
     {
