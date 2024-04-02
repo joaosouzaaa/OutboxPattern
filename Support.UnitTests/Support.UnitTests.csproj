@@ -32,8 +32,4 @@
 	  <ProjectReference Include="..\Support.Microservice\Support.Microservice.csproj" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="ServicesTests\" />
-	</ItemGroup>
-
 </Project>
