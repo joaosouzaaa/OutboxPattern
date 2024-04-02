@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
 using System.Net;
 using Tickets.Microservice.Interfaces.Data.UnitOfWork;
-using Tickets.Microservice.Interfaces.Setttings;
+using Tickets.Microservice.Interfaces.Settings;
 
 namespace Tickets.Microservice.Filters;
 

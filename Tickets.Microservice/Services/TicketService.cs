@@ -8,7 +8,7 @@ using Tickets.Microservice.Extensions;
 using Tickets.Microservice.Interfaces.Data.Repositories;
 using Tickets.Microservice.Interfaces.Mappers;
 using Tickets.Microservice.Interfaces.Services;
-using Tickets.Microservice.Interfaces.Setttings;
+using Tickets.Microservice.Interfaces.Settings;
 using Tickets.Microservice.Settings.PaginationSettings;
 
 namespace Tickets.Microservice.Services;

@@ -1,4 +1,4 @@
-﻿using Support.Microservice.Interfaces.Setttings;
+﻿using Support.Microservice.Interfaces.Settings;
 
 namespace Support.Microservice.Settings.NotificationSettings;
 

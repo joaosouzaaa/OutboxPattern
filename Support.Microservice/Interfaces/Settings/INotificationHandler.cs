@@ -1,6 +1,6 @@
 ﻿using Support.Microservice.Settings.NotificationSettings;
 
-namespace Support.Microservice.Interfaces.Setttings;
+namespace Support.Microservice.Interfaces.Settings;
 
 public interface INotificationHandler
 {

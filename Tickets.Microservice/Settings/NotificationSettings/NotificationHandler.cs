@@ -1,4 +1,4 @@
-﻿using Tickets.Microservice.Interfaces.Setttings;
+﻿using Tickets.Microservice.Interfaces.Settings;
 
 namespace Tickets.Microservice.Settings.NotificationSettings;
 

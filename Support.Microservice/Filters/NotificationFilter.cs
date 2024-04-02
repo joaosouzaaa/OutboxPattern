@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Support.Microservice.Interfaces.Setttings;
+using Support.Microservice.Interfaces.Settings;
 
 namespace Support.Microservice.Filters;
 
