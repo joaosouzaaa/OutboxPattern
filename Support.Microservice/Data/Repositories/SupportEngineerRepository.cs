@@ -16,6 +16,9 @@ public sealed class SupportEngineerRepository(AppDbContext dbContext) : ISupport
         return await SaveChangesAsync();
     }
 
+    public Task<SupportEngineer?> GetByIdAsync(long id) =>
+        DbContextSet.FirstOrDefaultAsync(s => s.Id == id);
+
     public Task<bool> UpdateAsync(SupportEngineer supportEngineer)
     {
         dbContext.Entry(supportEngineer).State = EntityState.Modified;
@@ -25,6 +28,12 @@ public sealed class SupportEngineerRepository(AppDbContext dbContext) : ISupport
 
     public Task<List<SupportEngineer>> GetAllAsync() =>
         DbContextSet.AsNoTracking().ToListAsync();
+
+    public Task<List<string>> GetAllEmailsEnabledAsync() =>
+        DbContextSet.AsNoTracking()
+                    .Where(s => s.IsEnabled == true)
+                    .Select(s => s.Email)
+                    .ToListAsync();
 
     public void Dispose()
     {
