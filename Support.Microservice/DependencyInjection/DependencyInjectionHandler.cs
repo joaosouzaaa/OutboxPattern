@@ -30,5 +30,6 @@ internal static class DependencyInjectionHandler
         services.AddMappersDependencyInjection();
         services.AddValidatorsDependencyInjection();
         services.AddServicesDependencyInjection();
+        services.AddConsumersDependencyInjection();
     }
 }
