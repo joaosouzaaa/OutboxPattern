@@ -29,7 +29,7 @@ public sealed class EmailServiceTests
     }
 
     [Fact]
-    public async Task SendTicketCreatedEmailAsync_SuccessfulScenario()
+    public async Task SendTicketCreatedEmailAsync_SuccessfulScenario_ReturnsCompletedTask()
     {
         // A
         var ticketCreatedEvent = new TicketCreatedEvent(Guid.NewGuid(), 123);
@@ -49,6 +49,23 @@ public sealed class EmailServiceTests
 
         // A
         _emailSenderMock.Verify(e => e.SendEmailAsync(It.Is<MimeMessage>(m => m.To.Count == toEmailList.Count)), Times.Once());
+    }
+
+    [Fact]
+    public async Task SendTicketCreatedEmailAsync_DoesNotHaveAnySupportEngineersEnabled_ReturnsVoid()
+    {
+        // A
+        var ticketCreatedEvent = new TicketCreatedEvent(Guid.NewGuid(), 123);
+
+        var toEmailList = new List<string>();
+        _supportEngineerRepositoryMock.Setup(s => s.GetAllEmailsEnabledAsync())
+            .ReturnsAsync(toEmailList);
+
+        // A
+        await _emailService.SendTicketCreatedEmailAsync(ticketCreatedEvent);
+
+        // A
+        _emailSenderMock.Verify(e => e.SendEmailAsync(It.IsAny<MimeMessage>()), Times.Never());
 
     }
 }

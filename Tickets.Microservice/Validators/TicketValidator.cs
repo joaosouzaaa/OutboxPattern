@@ -13,7 +13,7 @@ public sealed class TicketValidator : AbstractValidator<Ticket>
             .WithMessage(EMessage.InvalidLength.Description().FormatTo("Title", "3 to 150"));
 
         RuleFor(t => t.Number).GreaterThan(0)
-            .WithMessage(EMessage.InvalidLength.Description().FormatTo("Title", "3 to 150"));
+            .WithMessage(EMessage.GreaterThan.Description().FormatTo("Title", "0"));
 
         RuleFor(t => t.Tag).Length(1, 150)
             .WithMessage(EMessage.InvalidLength.Description().FormatTo("Tag", "1 to 150"));

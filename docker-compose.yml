@@ -30,3 +30,23 @@ services:
     depends_on:
       - ticketsql
       - rabbitmq
+ 
+  supportsql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql-container-support
+    environment:
+      - SA_PASSWORD=Support123456$
+      - ACCEPT_EULA=Y
+
+  support.microservice:
+    image: ${DOCKER_REGISTRY-}supportmicroservice
+    container_name: support-microservice
+    build:
+      context: .
+      dockerfile: Support.Microservice/Dockerfile
+    ports:
+      - "5030:80"
+      - "5031:443"
+    depends_on:
+      - supportsql
+      - rabbitmq
