@@ -6,7 +6,7 @@ using Support.Microservice.Extensions;
 using Support.Microservice.Interfaces.Mappers;
 using Support.Microservice.Interfaces.Repositories;
 using Support.Microservice.Interfaces.Services;
-using Support.Microservice.Interfaces.Setttings;
+using Support.Microservice.Interfaces.Settings;
 
 namespace Support.Microservice.Services;
 
@@ -36,6 +36,8 @@ public sealed class SupportEngineerService(ISupportEngineerRepository supportEng
 
             return false;
         }
+
+        supportEngineerMapper.UpdateToDomain(supportEngineerUpdate, supportEngineer);
 
         if (!await ValidateAsync(supportEngineer))
             return false;

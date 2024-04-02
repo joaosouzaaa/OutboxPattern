@@ -1,6 +1,6 @@
 ﻿using Tickets.Microservice.Settings.NotificationSettings;
 
-namespace Tickets.Microservice.Interfaces.Setttings;
+namespace Tickets.Microservice.Interfaces.Settings;
 
 public interface INotificationHandler
 {

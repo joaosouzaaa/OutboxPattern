@@ -8,7 +8,7 @@ using Tickets.Microservice.Entities;
 using Tickets.Microservice.Interfaces.Data.Repositories;
 using Tickets.Microservice.Interfaces.Mappers;
 using Tickets.Microservice.Interfaces.Services;
-using Tickets.Microservice.Interfaces.Setttings;
+using Tickets.Microservice.Interfaces.Settings;
 using Tickets.Microservice.Services;
 using Tickets.Microservice.Settings.PaginationSettings;
 using Tickets.UnitTests.TestBuilders;

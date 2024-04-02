@@ -5,7 +5,7 @@ using Support.Microservice.DataTransferObjects.SupportEngineer;
 using Support.Microservice.Entities;
 using Support.Microservice.Interfaces.Mappers;
 using Support.Microservice.Interfaces.Repositories;
-using Support.Microservice.Interfaces.Setttings;
+using Support.Microservice.Interfaces.Settings;
 using Support.Microservice.Services;
 using Support.UnitTests.TestBuilders;
 
