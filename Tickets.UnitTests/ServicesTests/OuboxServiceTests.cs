@@ -29,6 +29,6 @@ public sealed class OuboxServiceTests
         await _outboxService.AddAsync(ticketCreatedEvent);
 
         // A
-        _outboxRepositoryMock.Verify(o => o.AddAsync(It.Is<Outbox>(o => o.Type == ticketCreatedEvent.GetType().ToString())), Times.Once());
+        _outboxRepositoryMock.Verify(o => o.AddAsync(It.Is<Outbox>(o => o.Type == nameof(TicketCreatedEvent))), Times.Once());
     }
 }

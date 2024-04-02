@@ -16,6 +16,9 @@ public sealed class EmailService(ISupportEngineerRepository supportEngineerRepos
     {
         var toEmailList = await supportEngineerRepository.GetAllEmailsEnabledAsync();
 
+        if (!toEmailList.Any())
+            return;
+
         var mailMessage = new MimeMessage()
         {
             Subject = "A ticket was created!",

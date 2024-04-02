@@ -9,11 +9,13 @@ public sealed class OutboxService (IOutboxRepository outboxRepository) : IOutbox
 {
     public Task AddAsync<TEntity>(TEntity entity)
     {
+        var type = entity!.GetType().ToString();
+
         var outbox = new Outbox()
         {
             Content = JsonSerializer.Serialize(entity),
             CreatedDate = DateTime.UtcNow,
-            Type = entity!.GetType().ToString()
+            Type = type.Substring(type.LastIndexOf('.') + 1)
         };
 
         return outboxRepository.AddAsync(outbox);

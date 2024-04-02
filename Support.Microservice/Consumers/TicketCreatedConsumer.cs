@@ -27,11 +27,9 @@ public sealed class TicketCreatedConsumer(IOptions<RabbitMQCredentialsOptions> r
         using var connection = factory.CreateConnection();
         using var channel = connection.CreateModel();
 
-        var ticketCreatedEventType = typeof(TicketCreatedEvent).ToString();
+        var ticketCreatedEventQueue= nameof(TicketCreatedEvent);
 
-        channel.QueueDeclare(queue: ticketCreatedEventType, durable: false, exclusive: false, autoDelete: false, arguments: null);
-
-        channel.QueueBind(ticketCreatedEventType, "", ticketCreatedEventType);
+        channel.QueueDeclare(queue: ticketCreatedEventQueue, durable: false, exclusive: false, autoDelete: false, arguments: null);
 
         var consumer = new EventingBasicConsumer(channel);
 
@@ -40,7 +38,7 @@ public sealed class TicketCreatedConsumer(IOptions<RabbitMQCredentialsOptions> r
             await SendTicketCreatedEmailAsync(eventArgs);
         };
 
-        channel.BasicConsume(queue: ticketCreatedEventType, autoAck: true, consumer: consumer);
+        channel.BasicConsume(queue: ticketCreatedEventQueue, autoAck: true, consumer: consumer);
 
         while (!stoppingToken.IsCancellationRequested)
         {
