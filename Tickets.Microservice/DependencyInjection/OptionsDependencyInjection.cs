@@ -7,6 +7,6 @@ internal static class OptionsDependencyInjection
 {
     internal static void AddOptionsDependencyInjection(this IServiceCollection services, IConfiguration configuration)
     {
-        services.Configure<RabbitMQCredentialsOptions>(options => configuration.GetSection(OptionsConstants.RabbitMQCredentialsSection).Bind(options));
+        services.Configure<RabbitMQCredentialsOptions>(configuration.GetSection(OptionsConstants.RabbitMQCredentialsSection));
     }
 }
